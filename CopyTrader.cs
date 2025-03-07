@@ -171,6 +171,7 @@ namespace NinjaTrader.NinjaScript.Strategies
 			foreach (var followerCTA in followerCTAs) 
 			{
 				followerCTA.SetAccount();
+    				if (followerCTA.AccountName == leaderCTA.AccountName) return false;
 			}
 			
             if (leaderCTA.account == null)
@@ -213,7 +214,6 @@ namespace NinjaTrader.NinjaScript.Strategies
 
 		protected override void OnBarUpdate()
 		{
-			//여기에 strategy 로직을 추가하세요.
 		}
 
 		private void OnLeaderOrderUpdate(object sender, OrderEventArgs e)
