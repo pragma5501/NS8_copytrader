@@ -174,10 +174,10 @@ namespace NinjaTrader.NinjaScript.Strategies
     				if (followerCTA.AccountName == leaderCTA.AccountName) return false;
 			}
 			
-            if (leaderCTA.account == null)
-            {
-                return false;
-            }
+		        if (leaderCTA.account == null)
+		        {
+		                return false;
+		        }
 
 			return true;
 		}
